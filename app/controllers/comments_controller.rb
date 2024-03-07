@@ -1,7 +1,5 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[ show edit update destroy ]
-  before_action :is_an_authorized_user, only: [:create]
-  # before_action :is_author, only: [:update, :destroy, :edit]
   before_action {authorize (@comment || Comment)}
   
 

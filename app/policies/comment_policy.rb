@@ -11,13 +11,13 @@ class CommentPolicy < ApplicationPolicy
   end
 
   def update?
-    if user.id == @comment.author_id
-      true
-    end
+   if user == comment.author
+    true
+   end
   end
 
   def destroy?
-    if user.id == @comment.author_id
+    if user == comment.author
       true
     end
   end

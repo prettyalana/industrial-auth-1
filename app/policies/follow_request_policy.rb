@@ -14,7 +14,7 @@ class FollowRequestPolicy < ApplicationPolicy
     true
   end
 
-  def destroy
+  def destroy?
     true
   end
 
